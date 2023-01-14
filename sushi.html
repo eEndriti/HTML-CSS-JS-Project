@@ -52,23 +52,23 @@
       <h6 class="fs-6 d-flex justify-content-center">© 2023 FOODER. All Right Reserved.</h6>
     </div>
 
+</body>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script type="module">
         import {getProduct} from './modules/Product.js'
-       
-        import {getNavbar} from './modules/mainElements.js'
-        import {getFooter} from './modules/mainElements.js'
+      
+        import {getNavbar,getFooter} from './modules/mainElements.js'
+        import {} from './modules/mainElements.js'
 
         getNavbar('navbar')
         getFooter('footer')
         getProduct('sushi-product','sushi',null)
-       
+      
         const form = document.querySelector('#sign-out')
-        form.addEventListener('click', event => {
-        event.preventDefault()
-        signOut()
-  })
+          form.addEventListener('click', event => {
+          event.preventDefault()
+          signOut()
+        })
     </script>
     <script type="text/javascript" src="./modules/user.js">  </script>
-</body>
 </html>

@@ -38,13 +38,11 @@
     <script type="module">
        
        
-        import {getNavbar} from './modules/mainElements.js'
-        import {getFooter} from './modules/mainElements.js'
+        import {getNavbar,getFooter} from './modules/mainElements.js'
 
         getNavbar('navbar')
         getFooter('footer')
-              
-        
+                    
         const form = document.querySelector('#sign-out')
             form.addEventListener('click', event => {
             event.preventDefault()

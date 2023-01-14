@@ -173,8 +173,7 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script type="module">
         import {getProduct} from './modules/Product.js'
-        import {getNavbar} from './modules/mainElements.js'
-        import {getFooter} from './modules/mainElements.js'
+        import {getNavbar,getFooter} from './modules/mainElements.js'
 
         getNavbar('navbar')
         getFooter('footer')
@@ -186,23 +185,23 @@
         
         const user = localStorage.getItem('CurrentID')
         const admin = localStorage.getItem('kaAdmin')
-        console.log(admin)
+
         if(user){
           localStorage.setItem('hasUser','kaUser')
         }else{
           localStorage.setItem('hasUser','skaUser')
         }
-        if(admin){
+        if(admin === 'admin'){
           localStorage.setItem('kaAdmin','admin')
         }else{
           localStorage.setItem('kaAdmin','skaadmin')
         }
         
         const form = document.querySelector('#sign-out')
-        form.addEventListener('click', event => {
-        event.preventDefault()
-        signOut()
-  })
+          form.addEventListener('click', event => {
+          event.preventDefault()
+          signOut()
+        })
     </script>
     <script type="text/javascript" src="./modules/user.js">  </script>
 </body>

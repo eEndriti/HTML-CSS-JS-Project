@@ -40,7 +40,7 @@
                 parent.addEventListener("click", function(event) {
                     var buttonValue = event.target.getAttribute("value");
                     if(event.target && event.target.id === "deleteProduct") {
-                        deleteProduct(buttonValue)
+                        deleteOrder(buttonValue)
                     }
             });
 
@@ -52,10 +52,9 @@
 
        
     </script>
-    <script type="text/javascript" src="../modules/user.js"> 
-           
-        
-    </script>
+    <script type="text/javascript" src="../modules/user.js">       </script>
+    <script type="text/javascript" src="../modules/cart.js">       </script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>

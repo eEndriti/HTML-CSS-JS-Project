@@ -19,7 +19,7 @@
         <p class="fs-4 text-light text-center fw-bold" style="border-bottom: 1px solid white;">AUTHORIZATION</p>
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-light d-flex justify-content-center">
-                <form class="d-flex flex-column w-50" id="my-form">
+                <form class="d-flex flex-column w-50" id="userform">
                     <label for="email">E-Mail Address</label>
                     <input type="email" name="email" required class="bg-dark text-light" id="email-input">
                     <label for="ps">Password</label>
@@ -43,28 +43,27 @@
     <div class="row text-light m-3">
       <h6 class="fs-6 d-flex justify-content-center">© 2023 FOODER. All Right Reserved.</h6>
     </div>
+    
+</body>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
 
-    <script type="module">
-       
-       
-        import {getNavbar} from './modules/mainElements.js'
-        import {getFooter} from './modules/mainElements.js'
+        <script type="module">      
+        
+            import {getNavbar,getFooter} from './modules/mainElements.js'
 
-        getNavbar('navbar')
-        getFooter('footer')
-              
-        const form1 = document.querySelector('#my-form')
-        form1.addEventListener('submit', event => {
-        event.preventDefault()
-        checkUser()
-  })
-  const form = document.querySelector('#sign-out')
-        form.addEventListener('click', event => {
-        event.preventDefault()
-        signOut()
-  })
-    </script>
-    <script type="text/javascript" src="./modules/user.js">  </script>
-</body>
+            getNavbar('navbar')
+            getFooter('footer')
+                
+            const form1 = document.querySelector('#userform')
+            form1.addEventListener('submit', event => {
+                event.preventDefault()
+                checkUser()
+            })
+            const form = document.querySelector('#sign-out')
+            form.addEventListener('click', event => {
+                event.preventDefault()
+                signOut()
+            })
+        </script>
+        <script type="text/javascript" src="./modules/user.js"></script>
 </html>

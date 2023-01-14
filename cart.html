@@ -43,65 +43,55 @@
 
     <div class="row text-light m-3">
       <h6 class="fs-6 d-flex justify-content-center">© 2023 FOODER. All Right Reserved.</h6>
-    </div>
+    </div>  
 
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-
-    <script type="module">
-       
-       
-        import {getNavbar} from './modules/mainElements.js'
-        import {getFooter} from './modules/mainElements.js'
-        import {getCart,emptyCart,checkout,deleteProductFromCart} from './modules/mainElements.js'
-      
-        
-        
-       
-
-        getNavbar('navbar')
-        getFooter('footer')
-        getCart('table')
-        
-        
-        const empty = document.querySelector('#emptyCart')
-        empty.addEventListener('click', event => {
-        event.preventDefault()
-        if(document.getElementById('table').rows.length === 1 ){
-            alert('Your cart is empty!')
-           }else{
-            emptyCart()
-           }
-       
-        })
-
-        const cout = document.querySelector('#checkout')
-        cout.addEventListener('click', event => {
-        event.preventDefault() 
-           if(document.getElementById('table').rows.length === 1 ){
-            alert('Your cart is empty!')
-           }else{
-            checkout()
-           }
-        })
-
-        const form = document.querySelector('#sign-out')
-        form.addEventListener('click', event => {
-        event.preventDefault()
-        signOut()
-        })
-
-        const parent = document.querySelector("#table");
-                parent.addEventListener("click", function(event) {
-                    var buttonValue = event.target.getAttribute("value");
-                    if(event.target && event.target.id === "deleteProductFromCart") {
-                       
-                        deleteProductFromCart(buttonValue)
-                    }
-            });
-    </script>
-    <script type="text/javascript" src="./modules/user.js"> 
-
-    </script>
-    
 </body>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script type="module">
+          
+                import {getNavbar,getFooter} from './modules/mainElements.js'
+                    
+
+                getNavbar('navbar')
+                getFooter('footer')
+                getCart('table')
+                               
+                const empty = document.querySelector('#emptyCart')
+                empty.addEventListener('click', event => {
+                    event.preventDefault()
+                    if(document.getElementById('table').rows.length === 1 ){
+                        alert('Your cart is empty!')
+                    }else{
+                        emptyCart()
+                    }            
+                })
+
+                const cout = document.querySelector('#checkout')
+                cout.addEventListener('click', event => {
+                    event.preventDefault() 
+                    if(document.getElementById('table').rows.length === 1 ){
+                        alert('Your cart is empty!')
+                    }else{
+                        checkout()
+                    }
+                })
+
+                const form = document.querySelector('#sign-out')
+                    form.addEventListener('click', event => {
+                    event.preventDefault()
+                    signOut()
+                })
+
+                const parent = document.querySelector("#table");
+                parent.addEventListener("click", function(event) {
+                            var buttonValue = event.target.getAttribute("value");
+                            if(event.target && event.target.id === "deleteProductFromCart") {
+                            
+                                deleteProductFromCart(buttonValue)
+                            }
+                });
+            </script>
+            <script type="text/javascript" src="./modules/user.js">  </script>
+            <script type="text/javascript" src="./modules/cart.js">  </script>
+
 </html>

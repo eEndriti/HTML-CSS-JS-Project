@@ -76,7 +76,7 @@ export function getOneProduct(table,id,div){
         .then(response => response.json())
         .then(product => {
                  
-                        if(checkUser()){
+                        if(isUser()){
                             result +=`
                         
                         <div class="row m-5 d-flex flex-row justify-content-center">
@@ -105,18 +105,7 @@ export function getOneProduct(table,id,div){
         
 }
 
-export function checkUser(){
-    const u = localStorage.getItem('hasUser')
-    if(u === 'kaUser'){
-       
-        return true
-    }else{
-        alert('You need to log in to advance!')
-        window.location.href="login.html";
-        return false
-    }
 
-}
 
 export function addProduct(name,desc,price,qty,ctg,image){
     fetch(`https://63bdd384e348cb0762043976.mockapi.io/products`, {
@@ -134,7 +123,10 @@ export function addProduct(name,desc,price,qty,ctg,image){
        }         )
        })
        .then(response => response.json())
-       .then(data => window.confirm('Product succesfully registred!'))
+       .then(data =>{
+        alert('Product succesfully registred!');
+        location.reload(true);
+      }) 
        .catch(error => alert(error))
 }
 export function deleteProduct(id){
@@ -147,7 +139,10 @@ export function deleteProduct(id){
         })
         
         .then(res => res.json())
-        .then(data => alert('Product Deleted!'))
+        .then(data => {
+            alert('Product Deleted!');
+            location.reload(true);
+          })
         .catch(error => console.log(error))
   }
  

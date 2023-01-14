@@ -29,28 +29,26 @@
 
     <script type="module">
        
-        import {getItemFromURL} from './modules/mainElements.js'
-        import {getNavbar} from './modules/mainElements.js'
-        import {getFooter} from './modules/mainElements.js'
+        import {getItemFromURL,getNavbar,getFooter} from './modules/mainElements.js'
         import {getOneProduct} from './modules/Product.js'
         
        
 
         getNavbar('navbar')
         getFooter('footer')
-        const tb = getItemFromURL(document.URL,'tb')
-        const id = getItemFromURL(document.URL,'id')
-        
-        
+
+        const tb = getItemFromURL(document.URL,'ctg')
+        const id = getItemFromURL(document.URL,'id')             
         getOneProduct(tb,id,'view-product')
 
         const form = document.querySelector('#sign-out')
-        form.addEventListener('click', event => {
-        event.preventDefault()
-        signOut()
+            form.addEventListener('click', event => {
+            event.preventDefault()
+            signOut()
         })
     </script>
     <script type="text/javascript" src="./modules/user.js">  </script>
+    <script type="text/javascript" src="./modules/cart.js">  </script>
     
 </body>
 </html>

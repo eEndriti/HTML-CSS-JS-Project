@@ -53,18 +53,17 @@
     <script type="module">
         import {getProduct} from './modules/Product.js'
        
-        import {getNavbar} from './modules/mainElements.js'
-        import {getFooter} from './modules/mainElements.js'
+        import {getNavbar,getFooter} from './modules/mainElements.js'
 
         getNavbar('navbar')
         getFooter('footer')
         getProduct('pizza-product','pizza',null)
        
         const form = document.querySelector('#sign-out')
-        form.addEventListener('click', event => {
-        event.preventDefault()
-        signOut()
-  })
+          form.addEventListener('click', event => {
+          event.preventDefault()
+          signOut()
+        })
     </script>
     <script type="text/javascript" src="./modules/user.js">  </script>
 </body>
