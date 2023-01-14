@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <title>Pizza Fooder</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+  
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 my-3" id="navbar">   
+    </nav>
+
+
+    
+    <section id="item-description" class="container">
+      <div class="row my-5"> 
+          <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12 img-fluid d-flex justify-content-end image">
+            <img src="./assets/images/burger-desc.jpg" alt="">
+          </div>
+          <div class="col-xl-8 col-lg-8 col-md-8 col-xs-12 text-light">
+            <br>
+            <h4>Burgers</h6>
+              <br>
+              <p class="fs-6 ">
+                  <b>Happy National Sandwich Day! </b> 
+                  Did you know all burgers are sandwiches but not all sandwiches are burgers? It’s like how all Chicken Bacon Classics are delicious but not everything delicious is a Chicken Bacon Classic. </p>
+        </div>      
+      </div>     
+  </section>
+
+    <section id="products-header">
+        <div class="container-fluid">
+          <div class="row">  
+            <div class=" col-xl-2 col-lg-2"></div>         
+            <div class="content row d-flex flex-row justify-content-center col-xl-8 col-lg-8col-md-8 col-sm-12 " id="burger-product">
+
+            </div>
+            <div class=" col-xl-2 col-lg-2"></div>      
+          </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark" id="footer">
+  
+    </footer>
+    <div class="row text-light m-3">
+      <h6 class="fs-6 d-flex justify-content-center">© 2023 FOODER. All Right Reserved.</h6>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+        import {getProduct} from './modules/Product.js'
+       
+        import {getNavbar} from './modules/mainElements.js'
+        import {getFooter} from './modules/mainElements.js'
+
+        getNavbar('navbar')
+        getFooter('footer')
+        getProduct('burger-product','burger',null)
+       
+        const form = document.querySelector('#sign-out')
+        form.addEventListener('click', event => {
+        event.preventDefault()
+        signOut()
+  })
+    </script>
+    <script type="text/javascript" src="./modules/user.js">  </script>
+</body>
+</html>

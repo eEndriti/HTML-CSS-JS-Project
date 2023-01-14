@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <title>Admin Orders Manager</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+  
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 my-3" id="navbar">   
+    </nav>
+
+    <section class="allorders">
+        <div class="container">
+            <div class="row ">
+                <table class=" text-light table " id="table">
+                   
+                </table>
+            </div>
+        </div>
+    </section>
+
+      
+
+    <script type="module">
+       
+       
+        import {getNavbar,getAllOrders,deleteOrder} from '../modules/mainElements.js'
+        
+          
+        getNavbar('navbar')
+        getAllOrders('table')
+        
+        const parent = document.querySelector("#table");
+                parent.addEventListener("click", function(event) {
+                    var buttonValue = event.target.getAttribute("value");
+                    if(event.target && event.target.id === "deleteProduct") {
+                        deleteProduct(buttonValue)
+                    }
+            });
+
+        const form = document.querySelector('#sign-out')
+        form.addEventListener('click', event => {
+            event.preventDefault()
+            signOut()
+        })
+
+       
+    </script>
+    <script type="text/javascript" src="../modules/user.js"> 
+           
+        
+    </script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <title>Sushi Fooder</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+  
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 my-3" id="navbar">   
+    </nav>
+
+    <p class="fs-4 text-light text-center fw-bold">Contact US</p>
+
+    <section id="location-box" class="container">
+        <div class="row  d-flex justify-content-center">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-xs-12 bg-dark border-light">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12 text-light  m-1  p-1">
+                        <img src="./assets/images/logo.png" class="img-fluid " alt="">
+                        <br><br>
+                        <h6 class="fs-6">Fooder</h6>
+                        <p>My Company Glasgow D04 89GR</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-xs-12 text-light m-1  p-2">
+                        <div class="content-1 d-flex flex-row justify-content-start ">
+                            <div class="phone  " style="margin-right: 5px;">
+                                <i class="fa-solid fa-phone fs-5 "></i>
+                            </div>
+                            <div class="details">
+                                <h6 class="fs-6">Telephone</h6>
+                                <p>(123)456-7890</p>
+                            </div>
+                        </div>
+                        <div class="content-2  d-flex flex-row justify-content-start">
+                            <div class="comment  " style="margin-right: 5px;">
+                                <i class="fa-regular fa-comments fs-5 "></i>
+                            </div>
+                            <div class="details">
+                                <h6 class="fs-6">Comments</h6>
+                                <p>We are glad to hear from you</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12  text-light m-1 p-1 d-flex flex-row justify-content-start">
+                        <div class="key  " style="margin-right: 5px;">
+                            <i class="fa-solid fa-key fs-5"></i>
+                        </div>
+                        <div class="details">
+                            <h6>Opening Hours</h6>
+                            <p>7 Days a week from 9:00 am to 7:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section id="contact-form" class="container">
+        <p class="fs-4 text-light text-center fw-bold">Contact Form</p>
+        
+        <div class="row text-light ">
+            <form class="d-flex flex-column" action="received.html">
+                <label for="name">Your Name *</label>
+                <input type="text" name="name" max="50" required class="bg-dark text-light " >
+                <label for="email">E-Mail Address *</label>
+                <input type="email" name="email" max="50" required class="bg-dark text-light" >
+                <label for="message">Message</label>
+                <textarea class="bg-dark text-light " required  name="message" style="height: 20vh;">
+
+                </textarea>     
+                <div class="contact-button d-flex justify-content-end">
+                    <input type="submit" class="btn mt-3 fw-bold w-25 d-flex justify-content-center">
+                    
+                </div>
+                <br><br>
+            </form>
+           
+        </div>
+    </section>
+
+    <br><br>
+
+    <section id="map">
+        <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43446.46886471235!2d-93.28153522277765!3d44.98414787277457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32d94b49c2aad%3A0x92372904ed3e8473!2sOwamni%20by%20The%20Sioux%20Chef!5e0!3m2!1sen!2s!4v1673122216015!5m2!1sen!2s" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer class="bg-dark" id="footer">
+  
+    </footer>
+    <div class="row text-light m-3">
+      <h6 class="fs-6 d-flex justify-content-center">© 2023 FOODER. All Right Reserved.</h6>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+       
+       
+        import {getNavbar} from './modules/mainElements.js'
+        import {getFooter} from './modules/mainElements.js'
+
+        getNavbar('navbar')
+        getFooter('footer')
+              
+        const form = document.querySelector('#sign-out')
+        form.addEventListener('click', event => {
+        event.preventDefault()
+        signOut()
+  })
+    </script>
+    <script type="text/javascript" src="./modules/user.js">  </script>
+</body>
+</html>

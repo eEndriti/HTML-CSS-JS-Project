@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <title>Log In Fooder</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+  
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 my-3" id="navbar">   
+    </nav>
+
+    <section id="login" class="container">
+        <p class="fs-4 text-light text-center fw-bold" style="border-bottom: 1px solid white;">AUTHORIZATION</p>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-light d-flex justify-content-center">
+                <form class="d-flex flex-column w-50" id="my-form">
+                    <label for="email">E-Mail Address</label>
+                    <input type="email" name="email" required class="bg-dark text-light" id="email-input">
+                    <label for="ps">Password</label>
+                    <input type="password" name="ps" required class="bg-dark text-light" id="ps2-input">
+                    <div class="links d-flex flex-column align-items-end m-2">
+                        
+                        <a href="#">Forgot Your Password?</a>
+                        <a href="signup.html">Don't have an account yet?</a>
+                    </div>
+                    <div class="contact-button d-flex justify-content-end">
+                        <input type="submit" class="btn mt-3 fw-bold w-25 d-flex justify-content-center" >                  
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <footer class="bg-dark" id="footer">
+  
+    </footer>
+    <div class="row text-light m-3">
+      <h6 class="fs-6 d-flex justify-content-center">© 2023 FOODER. All Right Reserved.</h6>
+    </div>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+       
+       
+        import {getNavbar} from './modules/mainElements.js'
+        import {getFooter} from './modules/mainElements.js'
+
+        getNavbar('navbar')
+        getFooter('footer')
+              
+        const form1 = document.querySelector('#my-form')
+        form1.addEventListener('submit', event => {
+        event.preventDefault()
+        checkUser()
+  })
+  const form = document.querySelector('#sign-out')
+        form.addEventListener('click', event => {
+        event.preventDefault()
+        signOut()
+  })
+    </script>
+    <script type="text/javascript" src="./modules/user.js">  </script>
+</body>
+</html>

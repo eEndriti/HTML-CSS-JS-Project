@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <title>Product Fooder</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+  
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 my-3" id="navbar">   
+    </nav>
+
+    <section id="view-product" class="container">    
+    </section>
+   
+    <footer class="bg-dark" id="footer">
+    </footer>
+
+    <div class="row text-light m-3">
+      <h6 class="fs-6 d-flex justify-content-center">© 2023 FOODER. All Right Reserved.</h6>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+       
+        import {getItemFromURL} from './modules/mainElements.js'
+        import {getNavbar} from './modules/mainElements.js'
+        import {getFooter} from './modules/mainElements.js'
+        import {getOneProduct} from './modules/Product.js'
+        
+       
+
+        getNavbar('navbar')
+        getFooter('footer')
+        const tb = getItemFromURL(document.URL,'tb')
+        const id = getItemFromURL(document.URL,'id')
+        
+        
+        getOneProduct(tb,id,'view-product')
+
+        const form = document.querySelector('#sign-out')
+        form.addEventListener('click', event => {
+        event.preventDefault()
+        signOut()
+        })
+    </script>
+    <script type="text/javascript" src="./modules/user.js">  </script>
+    
+</body>
+</html>
