@@ -37,6 +37,7 @@ export function getNavbar(div){
            <a class="nav-link d-none sign-out" id="sign-out" >Sign Out <i style="margin-left:5px; margin-top:4px"class="fa-solid fa-right-from-bracket"></i></a>
            <a class="nav-link d-none" id="adminProducts" href="/admin/adminProducts.html">Manage Products</a>
            <a class="nav-link d-none" id="adminOrders" href="/admin/adminOrders.html">Manage Orders</a>
+           <a class="nav-link d-none" id="adminUsers" href="/admin/adminUsers.html">Manage Users</a>
          </li>
       </ul>
                        
@@ -67,6 +68,9 @@ export function getNavbar(div){
       const ad1 = document.getElementById('adminOrders')
       ad1.classList.remove('d-none')
       ad1.classList.add('d-flex')   
+      const ad2 = document.getElementById('adminUsers')
+      ad2.classList.remove('d-none')
+      ad2.classList.add('d-flex')   
    }
 }
 
@@ -78,12 +82,13 @@ function setActive() {
   var fullName ;
   var seperatedName ;
   var id;
-
-  if(url.length > 43){   
+ 
+  if(url.length >= 43){   
     fullName = url.split('/')[4]
     if(typeof fullName !== 'undefined'){
       seperatedName = fullName.split('.')[0]
       id = document.getElementById(seperatedName)
+      
     }
   }else{
     fullName = url.split('/')[3]

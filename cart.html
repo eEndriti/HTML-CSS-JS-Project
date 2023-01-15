@@ -16,8 +16,8 @@
     </nav>
 
     <section id="cart" class="container">  
-        <div class="row text-light table ">
-            <table id="table" class=" ">
+        <div class="row text-light table table-responsive">
+            <table id="table" class="table-bordered" style="border:1px solid black">
                 <tr>
                     <th>Nr.</th>
                     <th>Product</th>
@@ -54,7 +54,14 @@
 
                 getNavbar('navbar')
                 getFooter('footer')
-                getCart('table')
+                
+                let t = localStorage.getItem('hasUser')
+                if(t === 'skaUser'){
+                    alert('You need to log in to advance!')
+                    window.location = '/login.html'
+                }else{
+                    getCart('table')
+                }
                                
                 const empty = document.querySelector('#emptyCart')
                 empty.addEventListener('click', event => {

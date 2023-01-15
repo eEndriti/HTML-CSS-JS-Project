@@ -39,7 +39,15 @@
 
         const tb = getItemFromURL(document.URL,'ctg')
         const id = getItemFromURL(document.URL,'id')             
-        getOneProduct(tb,id,'view-product')
+        
+
+        let t = localStorage.getItem('hasUser')
+                if(t === 'skaUser'){
+                    alert('You need to log in to advance!')
+                    window.location = '/login.html'
+                }else{
+                    getOneProduct(tb,id,'view-product')
+                }
 
         const form = document.querySelector('#sign-out')
             form.addEventListener('click', event => {

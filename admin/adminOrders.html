@@ -17,8 +17,8 @@
 
     <section class="allorders">
         <div class="container">
-            <div class="row ">
-                <table class=" text-light table " id="table">
+            <div class="row table-responsive">
+                <table id="table" class="table-bordered text-light" style="border:1px solid black">
                    
                 </table>
             </div>
@@ -30,12 +30,21 @@
     <script type="module">
        
        
-        import {getNavbar,getAllOrders,deleteOrder} from '../modules/mainElements.js'
+        import {getNavbar,getFooter,getAllOrders,deleteOrder} from '../modules/mainElements.js'
         
           
         getNavbar('navbar')
-        getAllOrders('table')
+       
         
+        let t = localStorage.getItem('hasUser')
+                if(t === 'skaUser'){
+                    alert('You need to log in to advance!')
+                    window.location = '/login.html'
+                }else{
+                    getAllOrders('table')
+                }
+                     
+
         const parent = document.querySelector("#table");
                 parent.addEventListener("click", function(event) {
                     var buttonValue = event.target.getAttribute("value");
