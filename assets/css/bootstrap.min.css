@@ -187,12 +187,12 @@ footer a:hover{
 }
 
 #contact-form label,#login input{
-    font-size: 13px;
+    font-size: 103x;
     padding:5px 3px;
 }
 #contact-form input,textarea,#login input{
     border: 1px solid gray;
-    height: 4vh;
+    height: 5vh;
     border-radius: 5px;
 }
 #login a,#sign-out a{
@@ -214,12 +214,18 @@ table td{
     border:2px solid #000000;
    
 }
+.modal label{
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 2px;
+}
 .modal input,textarea,select{
     margin:5px !important;
-    border:1px solid rgb(61, 61, 61);
+    padding: 5px;
+    border:1px solid rgba(61, 61, 61,0.5);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom:2px solid black;
+    border-bottom:2px solid rgba(61, 61, 61,0.5);
 }
 table td{
     padding: 5px;
